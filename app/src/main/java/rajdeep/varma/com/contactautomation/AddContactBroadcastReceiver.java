@@ -69,7 +69,7 @@ public class AddContactBroadcastReceiver extends BroadcastReceiver {
         // Asking the Contact provider to create a new contact
         try {
             context.getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
-            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Contact Added!", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(context, "Exception: " + e.getMessage(), Toast.LENGTH_SHORT).show();
